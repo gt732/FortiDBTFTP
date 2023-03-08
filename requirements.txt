@@ -1,0 +1,5 @@
+py3tftpsql==1.0.2
+conf-diff
+pydantic
+psycopg2-binary
+rich

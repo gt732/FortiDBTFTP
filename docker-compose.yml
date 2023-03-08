@@ -1,0 +1,26 @@
+version: '3'
+services:
+  py3tftpsql:
+    image: gt732/py3tftpsql
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_HOSTNAME=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=py3tftpsql
+      - DATABASE_PASSWORD=admin123
+      - DATABASE_USERNAME=postgres
+    ports:
+      - "69:69/udp"
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_DB=py3tftpsql
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin123
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    ports:
+      - "55362:5432/tcp"
+volumes:
+  postgres-db:
