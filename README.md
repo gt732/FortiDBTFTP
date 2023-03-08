@@ -3,6 +3,8 @@ Quick project that uses a modified version of py3tftp library to write to a post
 
 Original library https://github.com/sirMackk/py3tftp
 
+My modified version https://github.com/gt732/py3tftp-sql
+
 ## Postgres Table
 ```
 id PRIMARY KEY,
