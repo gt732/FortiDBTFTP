@@ -1,6 +1,8 @@
 # FortiDBTFTP
 Quick project that uses a modified version of py3tftp library to write to a postgres db instead of creating a file locally. The fortigate firewall is configured for scheduled backups and uploads the configuration via tftp to a postgres db.
 
+Original library https://github.com/sirMackk/py3tftp
+
 ## Postgres Table
 ```
 id PRIMARY KEY,
